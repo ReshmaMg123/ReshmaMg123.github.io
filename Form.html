@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=display-width,initial-scale=1">
+        <title>Form</Title>
+    </head>
+    <body>
+        <form method="get" action="http://localhost/echo.py" oninput="sum.value=multiply(qty,price)">
+            <dl>
+                <dt>User Name:</dt>
+                <dd><input type="text" name="Name"></dd>
+                <dt>Password:</dt>
+                <dd><input type="password" name="Pwd"></dd>
+                <dt>Zip Code:</dt>
+                <dd><input type="text" name="Zip" value="34567" size="5" max-length="5" placeholder></dd>
+            </dl>
+            URL: <input type="url" name="url" size="54"><br>
+            Email: <input type="email" name="email"><br>
+            DOB: <input type="date" name="date"><br>
+            Month: <input type="month" name="month"><br>
+            Week: <input type="week" name="week"><br>
+            Time: <input type="time" name="time"><br>
+            Datetime: <input type="datetime-local" name="datetime"><br>
+            RollNo: <input type="number" name="number"><br>
+            Range: <input type="range" name="range"><br>
+            Color: <input type="color" name="color"><br>
+            File: <input type="file" name="file"><br>
+            Comments: 
+            <textarea name="The Future Web" rows="6" cols="70"></textarea><br>
+            Send details<input type="checkbox" name="send" value="details" checked>
+            Send prices<input type="checkbox" name="send" value="prices"><br>
+            <fieldset>
+                <legend>What kind of language is HTML?</legend>
+                Scripting <input type="radio" name="definition" value="scripting" checked><br>
+                Markup <input type="radio" name="definition" value="markup"><br>
+                Programming <input type="radio" name="definition" value="programming"><br>
+            </fieldset>
+            Qty(10 available)<input type="number" id="qty" name="quantity" min="1" max="10">
+            <input type="hidden" id="price" name="unit price" value="24.99">
+            <output name="sum" for="qty price"></output><br>
+            <input type="submit" name="Form" value="Submit Form">
+            <script>
+                function multiply(q,p){
+                    let result=parseFloat(q.value)*parseFloat(p.value)
+                    if(isNaN(result) || result<1) return ''
+                    else return 'Total: $'+result.toFixed(2)}
+            </script>
+            <input type="reset" value="reset form">
+            <input type="button" value="choose">
+            <input type="image" src="icon.png" alt="submit button" title="click to submit form">
+            <button type="button" onclick="alert('Enter your favorite color')"><img src="icon.png">Help</button>
+            <select name="list" size="2">
+                <optgroup label="Items">
+                    <option value="i1">Item 1</option>
+                    <option value="i2" selected>Item 2</option>
+                    <option value="i3">Item 3</option>
+                </optgroup>
+            </select><br>
+            <fieldset>
+            <datalist id="browsers">
+                <option value="Google Chrome"></option>
+                <option value="Firefox"></option>
+                <option value="Safari"></option>
+                <option value="Opera"></option>
+                <option value="Edge"></option>
+            </datalist>
+            <label>
+                Choose browser from the list:
+                <input list="browsers" name="mybrowser" tabindex="2">
+            </label>
+            <label>
+                Checkbox:
+                <input type="checkbox" tabindex="1">
+            </label>
+            </fieldset>
+        </form>
+    </body>
+</html>

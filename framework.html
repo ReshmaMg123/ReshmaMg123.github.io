@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="'en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=display-width; initial-scale=1"
+    <link rel="shortcut icon" href="icon.png">
+    <title>Framework</title>
+    <style>
+        h1#top{border:2px solid red;}
+        main{border:2px solid red;}
+        footer{border:2px solid red;}
+        #art-2{color:blueviolet;}
+        h2 ~ article{background:bisque url(icon.png) no-repeat top right;}
+        section > article.sidebar{background:bisque url(icon.png) no-repeat center scroll;}
+        
+
+    </style>
+    </head>
+    <body>
+        <h1  id="top">Interesting Articles</h1>
+        <main>
+            <section style="border:1px solid black">
+                <h2>Section 1</h2>
+                <article>
+                    <h3 id="art-1">Sally's Article</h2>
+                    <p><q>Article content...</q> <br>
+                    <cite>James M. Barrie</cite></p>
+                    <aside>James M. Barrie(1860-1937) was a Scottish author and playwright</aside>
+                </article> <hr>
+                <article class="sidebar">
+                    <h3 id="art-2">Terry's Article</h2>
+                    <p><q>Article content...hgfghfhdvmdemjhbn fhfdfh h  h mhffhgdtj jhghjgfhg hgjffh fhjhjtv yfghfdrhedc x c</q> <br>
+                    <cite>Oscar Wilde</cite></p> 
+                    <aside>Oscar Wilde(1854-1900) was an Irish writer and poet</aside>
+                </article>
+            </section>
+            <section style="border:1px solid black">
+                <h2>Section 2</h2>
+                <h3>Article3</h3>
+                <p>Article content</p>
+            </section>
+       
+        </main>
+        <footer>
+            <nav>
+            <h3>Information</h3>
+            <a href="#art-1">Sally's Article</a> -
+            <a href="#art-2">Terry's Article</a> -
+            <a href="#top">Top of Page</a>
+            </nav>
+
+            <small>Copyright &copy; Example Corporation</small>
+            <address>www.example.com</address>
+            <style>
+                article.sidebar > p,aside
+                {display:table-cell; padding-right:20px;}
+                aside{border:2px solid red}
+            </style>
+        </footer>
+    </body>
+</html>

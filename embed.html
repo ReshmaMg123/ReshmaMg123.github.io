@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>.
+        <p>This paragraph has some object inside.<br>
+            <object data="ticket.pdf" type="application/pdf"></object>
+            <br>text after object..
+        </p>
+        <embed src="basketball.svg" type="image/svg+xml" width="280" height="200"><br>
+        <p style="width:200px; float:left;">Some text to be inserted here... something about the html file next to this text</p>
+        <aside><iframe src="guage.html" width="300" height="220"></iframe></aside>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            <source src="audio.ogg" type="audio/ogg">
+            [fallback message]
+        </audio>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.webm" type="video/webm">
+            <track src="video-subtitles.vtt" kind="subtitles" srclang="en" default>
+            [fallback message]
+        </video><br>
+        <audio id="snd" src="audio.mp3">[Fallback message]</audio>
+        <img id="ctl" src="icon.png" width="32" height="32" alt="control">
+        <progress id="bar" value="0"></progress>
+        <span id="num">[Audio]</span>
+        <script>
+            (function(){
+                const snd=document.geElementById('snd')
+                const ctl=document.geElementById('ctl')
+                const bar=document.geElementById('bar')
+                const num=document.geElementById('num')
+                let run = true
+
+                ctl.onclick=function(){
+                    (run)? snd.play() : snd.pause()
+                    run = !run}
+                snd.ontimeupdate=function(){
+                    bar.value=(snd.currentTime/snd.duration)
+                    num.innerHTML= Math.floor(100*bar.value)+'%'}
+        })()
+        </script>
+        <button>show dialog</button>
+    </body>
+</html>
