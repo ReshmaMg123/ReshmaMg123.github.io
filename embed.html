@@ -1,3 +1,4 @@
+[O
 <!DOCTYPE html>
 <html>
     <head></head>
@@ -6,6 +7,11 @@
             <object data="ticket.pdf" type="application/pdf"></object>
             <br>text after object..
         </p>
+	<picture>
+		<source media="(min-width:200px)" srcset="icon-small.png">
+		<source media="(min-width:500px)" srcset="icon-large.png">
+		<img src=icon.png alt="icon-image" title="image for old browsers that do not support selection feature">
+	</picture>
         <embed src="basketball.svg" type="image/svg+xml" width="280" height="200"><br>
         <p style="width:200px; float:left;">Some text to be inserted here... something about the html file next to this text</p>
         <aside><iframe src="guage.html" width="300" height="220"></iframe></aside>
