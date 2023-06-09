@@ -7,6 +7,7 @@
     <body>
         <h2>Personal Details Form</h2>
         <form method="get" action="http://localhost/echo.py" oninput="sum.value=multiply(qty,price)">
+            <fieldset>
             <dl>
                 <dt>User Name:</dt>
                 <dd><input type="text" name="Name"></dd>
@@ -15,6 +16,8 @@
                 <dt>Zip Code:</dt>
                 <dd><input type="text" name="Zip" value="34567" size="5" max-length="5" placeholder></dd>
             </dl>
+            </fieldset>
+            <fieldset>
             URL: <input type="url" name="url" size="54"><br>
             Email: <input type="email" name="email"><br>
             DOB: <input type="date" name="date"><br>
@@ -30,12 +33,14 @@
             <textarea name="The Future Web" rows="6" cols="70"></textarea><br>
             Send details<input type="checkbox" name="send" value="details" checked>
             Send prices<input type="checkbox" name="send" value="prices"><br>
+            </fieldset>
             <fieldset>
                 <legend>What kind of language is HTML?</legend>
                 Scripting <input type="radio" name="definition" value="scripting" checked><br>
                 Markup <input type="radio" name="definition" value="markup"><br>
                 Programming <input type="radio" name="definition" value="programming"><br>
             </fieldset>
+            <fieldset>
             Qty(10 available)<input type="number" id="qty" name="quantity" min="1" max="10">
             <input type="hidden" id="price" name="unit price" value="24.99">
             <output name="sum" for="qty price"></output><br>
@@ -49,15 +54,16 @@
             <input type="reset" value="reset form">
             <input type="button" value="choose">
             <input type="image" src="icon.png" alt="submit button" title="click to submit form">
-            <button type="button" onclick="alert('Enter your favorite color')"><img src="icon.png">Help</button>
+            <button type="button" onclick="alert('Enter your favorite color')"><img src="icon.png">Help</button><br>
+            </fieldset>
+            <fieldset>
             <select name="list" size="2">
                 <optgroup label="Items">
                     <option value="i1">Item 1</option>
                     <option value="i2" selected>Item 2</option>
                     <option value="i3">Item 3</option>
                 </optgroup>
-            </select><br>
-            <fieldset>
+            </select>
             <datalist id="browsers">
                 <option value="Google Chrome"></option>
                 <option value="Firefox"></option>
